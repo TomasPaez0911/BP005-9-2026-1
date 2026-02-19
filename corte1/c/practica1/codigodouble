@@ -1,1 +1,20 @@
+#include <stdio.h>
 
+int main() {
+    float num1, num2, suma;
+
+    // Solicitar al usuario los números
+    printf("Ingrese el primer numero float: ");
+    scanf("%f", &num1); // %f es para float
+
+    printf("Ingrese el segundo numero float: ");
+    scanf("%f", &num2);
+
+    // Realizar la suma
+    suma = num1 + num2;
+
+    // Mostrar el resultado con 2 decimales
+    printf("La suma de %.2f y %.2f es: %.2f\n", num1, num2, suma);
+
+    return 0;
+}
