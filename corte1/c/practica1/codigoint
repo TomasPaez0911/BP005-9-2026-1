@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int numero1, numero2, suma;
+
+    // Solicitar al usuario que introduzca dos números enteros
+    printf("Introduce el primer numero: ");
+    scanf("%d", &numero1);
+    printf("Introduce el segundo numero: ");
+    scanf("%d", &numero2);
+
+    // Sumar los dos números
+    suma = numero1 + numero2;
+
+    // Mostrar el resultado
+    printf("%d + %d = %d\n", numero1, numero2, suma);
+
+    return 0;
+}
