@@ -21,11 +21,11 @@ int main(){
   
  
    printf("la resta de los resultados es %d\n",rest (a,b));
-   return 0;
+ 
 
-   printf("la suma de los resultados es %d\n",sum(a,b));
-   return 0;
+   printf("la suma de los resultados es %d\n",sum (a,b));
+   
 
-   printf("la multiplicacion de los resultados es %d\n",mul(a,b));
+   printf("la multiplicacion de los resultados es %d\n",mul (a,b));
    return 0;
 }
