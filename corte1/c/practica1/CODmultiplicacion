@@ -1,0 +1,16 @@
+#include <stdio.h>
+ int mul(int x1 , int x2){
+ int result;
+ result = x1 * x2 ;
+ return result;
+}
+
+int main(){
+   int a, b, r;
+   a=3;
+   b=5;
+   r=mul(a, b);
+ 
+   printf("la multiplicacion de los resultados es %d\n",r);
+   return 0;
+}
