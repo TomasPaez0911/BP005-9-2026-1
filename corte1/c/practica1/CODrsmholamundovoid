@@ -1,0 +1,36 @@
+#include <stdio.h>
+ int rest(int x1 , int x2){
+ int result;
+ result = x1 - x2 ;
+ return result;
+}
+ int sum(int x1 , int x2){
+ int result;
+ result = x1 + x2 ;
+ return result;
+}
+ int mul(int x1 , int x2){
+ int result;
+ result = x1 * x2 ;
+ return result;
+}
+void imprimir(){
+    printf("hola mundo\n");
+}
+
+int main(){
+   int a, b;
+   a=3;
+   b=5;
+  
+ 
+   printf("la resta de los resultados es %d\n",rest (a,b));
+ 
+
+   printf("la suma de los resultados es %d\n",sum (a,b));
+   
+
+   printf("la multiplicacion de los resultados es %d\n",mul (a,b));
+   imprimir ();
+return 0;
+}
