@@ -1,0 +1,20 @@
+#include <stdio.h>
+  int main(){
+     int x;
+     int y;
+
+
+    // Solicitar al usuario que ingrese x y
+    printf("Ingrese el valor de x/n: ");
+    scanf("%d", &x);
+    printf("Ingrese el valor de y/n: ");
+    scanf("%d", &y);
+
+    // Realizar if
+     if (x , y) {
+
+    // Mostrar el resultado 
+    printf("x es mayor que y/n");
+}
+ 
+   return 0;
