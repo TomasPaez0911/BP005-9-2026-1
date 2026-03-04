@@ -1,0 +1,8 @@
+int x = 20;
+int y = 18;
+
+bool isGreater = x > y;
+
+if (isGreater) {
+  printf("x is greater than y");
+}
