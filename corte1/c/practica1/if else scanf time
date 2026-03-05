@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int time; // Solo int
+
+    printf("Introduce la hora (0-23): ");
+    scanf("%d", &time); // Uso de scanf
+
+    // Uso de if-else para control de flujo
+    if (time >= 0 && time < 12) {
+        printf("Buenos dias.\n");
+    } else if (time >= 12 && time < 18) {
+        printf("Buenas tardes.\n");
+    } else if (time >= 18 && time < 24) {
+        printf("Buenas noches.\n");
+    } else {
+        printf("Hora no valida.\n");
+    }
+
+    return 0;
+}
