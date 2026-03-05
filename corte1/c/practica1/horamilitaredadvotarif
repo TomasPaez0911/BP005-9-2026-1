@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+   int age = 20;
+bool isCitizen = true;
+
+if (age >= 18) {
+  printf("Old enough to vote.\n");
+
+  if (isCitizen) {
+    printf("And you are a citizen, so you can vote!\n");
+  } else {
+    printf("But you must be a citizen to vote.\n");
+  } 
+} else {
+  printf("Not old enough to vote.\n");
+}
+  int time = 16;
+ 
+ printf("ingrese la hora en formato militar: ");
+ scanf("%d" , &time); 
+
+ bool isMorning = time < 12;
+ bool isDay = time < 18;
+ 
+ if (isMorning){
+   printf("good morning.\n");
+} 
