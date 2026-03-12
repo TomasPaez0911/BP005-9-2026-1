@@ -1,0 +1,18 @@
+const int pinEntrada = 2; // Pin donde está conectado el sensor/botón
+ int estado = 0; // Variable para guardar la lectura
+
+void setup() {
+ pinMode(pinEntrada, INPUT); // Configurar pin como entrada
+ pinMode(LED_BUILTIN, OUTPUT);// Iniciar monitor serie
+ }
+
+void loop() {
+ estado = digitalRead(pinEntrada); // Leer el estado
+ if(estado == 0){
+  digitalWrite(LED_BUILTIN, LOW);
+  }// Leer el estado
+  else{
+    digitalWrite(LED_BUILTIN, HIGH);
+ }        // Mostrar en monitor (0 o 1)
+ delay(100);      // Pequeña pausa
+ }
