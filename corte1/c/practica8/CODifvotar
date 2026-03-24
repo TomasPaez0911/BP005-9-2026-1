@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+#include <stdbool.h>
+
+  int main () {
+    
+    int age;
+    int isCitizen;
+
+    printf("Ingrese la edad: ");
+    scanf("%d", &age);
+
+    printf("Es ciudadano? (1 = si, 0 = no): ");
+    scanf("%d", &isCitizen);
+       
+
+             if (age >= 18) {
+             printf("Tiene edad suficiente para votar.\n");
+
+                 if (isCitizen) {
+                   printf("Y es ciudadano, asi que puede votar!\n");
+
+                 } else {
+                   printf("Pero debe ser ciudadano para votar.\n");
+                 }
+
+             
+            } else {
+              printf("No tiene la edad suficiente para votar.\n");
+            
+            }
+return 0;
+
+}
