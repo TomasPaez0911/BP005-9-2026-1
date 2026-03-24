@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+ int main() {
+ char nombre[30];
+ float nota1, nota2, nota3, promedio;
+
+ printf("Ingrese el nombre del estudiante: ");
+ scanf("%s", nombre);
+
+ printf("Ingrese la nota 1: ");
+ scanf("%f", &nota1);
+
+ printf("Ingrese la nota 2: ");
+ scanf("%f", &nota2);
+
+ printf("Ingrese la nota 3: ");
+ scanf("%f", &nota3);
+
+ if ((nota1 < 0 || nota1 > 5) || (nota2 < 0 || nota2 > 5) || (nota3 < 0
+|| nota3 > 5)) {
+ printf("Una o mas notas son invalidas.\n");
+ } else {
+ promedio = (nota1 + nota2 + nota3) / 3;
+
+ printf("\nEstudiante: %s\n", nombre);
+ printf("Promedio: %.2f\n", promedio);
+
+ if (promedio < 3.0) {
+ printf("Resultado: Reprobado.\n");
+
+ } else if (promedio < 4.0) {
+ printf("Resultado: Aprobado con desempeno aceptable.\n");
+ } else if (promedio < 4.5) {
+ printf("Resultado: Buen desempeno.\n");
+ } else {
+ printf("Resultado: Excelente desempeno.\n");
+ }
+ }
+
+ return 0;
+ }
