@@ -1,0 +1,28 @@
+include <stdio.h>
+
+ int main() {
+ float x, y;
+
+ printf("Ingrese la coordenada x: ");
+ scanf("%f", &x);
+
+ printf("Ingrese la coordenada y: ");
+ scanf("%f", &y);
+
+ if (x > 0 && y > 0) {
+ printf("El punto esta en el primer cuadrante.\n");
+ } else if (x < 0 && y > 0) {
+ printf("El punto esta en el segundo cuadrante.\n");
+ } else if (x < 0 && y < 0) {
+ printf("El punto esta en el tercer cuadrante.\n");
+ } else if (x > 0 && y < 0) {
+ printf("El punto esta en el cuarto cuadrante.\n");
+ } else if (x == 0 && y == 0) {
+ printf("El punto esta en el origen.\n");
+ } else if (x == 0) {
+ printf("El punto esta sobre el eje Y.\n");
+ } else {
+ printf("El punto esta sobre el eje X.\n");
+ }
+ return 0;
+ }
