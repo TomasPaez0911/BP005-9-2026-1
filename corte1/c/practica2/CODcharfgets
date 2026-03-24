@@ -1,0 +1,12 @@
+ #include <stdio.h>
+
+ int main() {
+ char nombreCompleto[50];
+
+ printf("Ingrese su nombre completo: ");
+ fgets(nombreCompleto, sizeof(nombreCompleto), stdin);
+
+
+ printf("Usted i n g r e s : %s", nombreCompleto);
+ return 0;
+ }
