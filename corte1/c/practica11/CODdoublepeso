@@ -1,0 +1,12 @@
+ #include <stdio.h>
+
+ int main() {
+ double peso;
+
+
+ printf("Ingrese su peso en kilogramos: ");
+ scanf("%lf", &peso);
+
+ printf("El peso ingresado es: %.2lf kg\n", peso);
+ return 0;
+ }
