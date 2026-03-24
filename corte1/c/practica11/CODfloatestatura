@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+ int main() {
+ float estatura;
+
+ printf("Ingrese su estatura en metros: ");
+ scanf("%f", &estatura);
+
+ printf("La estatura ingresada es: %.2f m\n", estatura);
+ return 0;
+ }
