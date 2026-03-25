@@ -1,0 +1,225 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+
+    // Mensaje de bienvenida
+    printf("=== SISTEMA DE ANALISIS ACADEMICO, Hola profe henry ===\n\n");
+
+    // Variables
+    int codigo, edad;
+    float nota1, nota2, nota3, promedio;
+    double matricula;
+    char inicialApellido;
+    char nombre[50];
+
+    bool matriculaActiva, documento, induccion, monitor;
+    bool accesoLab;
+
+    int temp;
+    const char *paridad;  // ✔ CORRECTO para strings constantes
+
+    // Entrada de datos
+    printf("Ingrese codigo del estudiante: ");
+    scanf("%d", &codigo);
+
+    printf("Ingrese nombre completo: ");
+    scanf(" %[^\n]", nombre);
+
+    printf("Ingrese inicial del apellido: ");
+    scanf(" %c", &inicialApellido);
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+
+    // Mensaje de bienvenida
+    printf("=== SISTEMA DE ANALISIS ACADEMICO, Hola profe henry ===\n\n");
+
+    // Variables
+    int codigo, edad;
+    float nota1, nota2, nota3, promedio;
+    double matricula;
+    char inicialApellido;
+    char nombre[50];
+
+    bool matriculaActiva, documento, induccion, monitor;
+    bool accesoLab;
+
+    int temp;
+    const char *paridad;  // ✔ CORRECTO para strings constantes
+
+    // Entrada de datos
+    printf("Ingrese codigo del estudiante: ");
+    scanf("%d", &codigo);
+
+    printf("Ingrese nombre completo: ");
+    scanf(" %[^\n]", nombre);
+
+    printf("Ingrese inicial del apellido: ");
+    scanf(" %c", &inicialApellido);
+
+    printf("Ingrese edad: ");
+    scanf("%d", &edad);
+
+    printf("Ingrese nota 1: ");
+    scanf("%f", &nota1);
+
+    printf("Ingrese nota 2: ");
+    scanf("%f", &nota2);
+
+    printf("Ingrese nota 3: ");
+    scanf("%f", &nota3);
+
+    printf("Ingrese valor de matricula: ");
+    scanf("%lf", &matricula);
+
+    // Booleanos
+    printf("Tiene matricula activa? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    matriculaActiva = temp;
+
+    printf("Presento documento? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    documento = temp;
+
+    printf("Aprobo induccion? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    induccion = temp;
+
+    printf("Es monitor? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    monitor = temp;
+
+    // Validación de notas
+    if (nota1 < 0 || nota1 > 5 || nota2 < 0 || nota2 > 5 || nota3 < 0 || nota3 > 5) {
+        printf("\nError: Las notas deben estar entre 0 y 5.\n");
+        return 0;
+    }
+
+    // Promedio
+    promedio = (nota1 + nota2 + nota3) / 3;
+
+    // ✔ OPERADOR TERNARIO (CORREGIDO)
+    paridad = (codigo % 2 == 0) ? "PAR" : "IMPAR";
+    printf("\nEl codigo es: %s\n", paridad);
+
+    // Clasificación académica
+    if (promedio < 3.0) {
+        printf("Desempeno: Reprobado\n");
+    } else if (promedio < 4.0) {
+        printf("Desempeno: Aceptable\n");
+    } else if (promedio < 4.5) {
+        printf("Desempeno: Bueno\n");
+    } else {
+        printf("Desempeno: Excelente\n");
+    }
+
+    // Acceso al laboratorio
+    accesoLab = matriculaActiva && documento && (induccion || monitor);
+
+    if (accesoLab) {
+        printf("\nAcceso al laboratorio: PERMITIDO\n");
+
+        if (monitor) {
+            printf("Rol: Monitor (acceso especial)\n");
+        } else {
+            printf("Rol: Estudiante\n");
+        }
+
+    } else {
+        printf("\nAcceso al laboratorio: DENEGADO\n");
+    }
+
+    // Resumen final
+    printf("\n=== RESUMEN FINAL ===\n");
+    printf("Codigo: %d (%s)\n", codigo, paridad);
+    printf("Nombre: %s %c\n", nombre, inicialApellido);
+    printf("Edad: %d\n", edad);
+    printf("Promedio: %.2f\n", promedio);
+    printf("Matricula: %.2lf\n", matricula);
+
+    return 0;
+}    printf("Ingrese edad: ");
+    scanf("%d", &edad);
+
+    printf("Ingrese nota 1: ");
+    scanf("%f", &nota1);
+
+    printf("Ingrese nota 2: ");
+    scanf("%f", &nota2);
+
+    printf("Ingrese nota 3: ");
+    scanf("%f", &nota3);
+
+    printf("Ingrese valor de matricula: ");
+    scanf("%lf", &matricula);
+
+    // Booleanos
+    printf("Tiene matricula activa? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    matriculaActiva = temp;
+
+    printf("Presento documento? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    documento = temp;
+
+    printf("Aprobo induccion? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    induccion = temp;
+
+    printf("Es monitor? (1=si, 0=no): ");
+    scanf("%d", &temp);
+    monitor = temp;
+
+    // Validación de notas
+    if (nota1 < 0 || nota1 > 5 || nota2 < 0 || nota2 > 5 || nota3 < 0 || nota3 > 5) {
+        printf("\nError: Las notas deben estar entre 0 y 5.\n");
+        return 0;
+    }
+
+    // Promedio
+    promedio = (nota1 + nota2 + nota3) / 3;
+
+    // ✔ OPERADOR TERNARIO (CORREGIDO)
+    paridad = (codigo % 2 == 0) ? "PAR" : "IMPAR";
+    printf("\nEl codigo es: %s\n", paridad);
+
+    // Clasificación académica
+    if (promedio < 3.0) {
+        printf("Desempeno: Reprobado\n");
+    } else if (promedio < 4.0) {
+        printf("Desempeno: Aceptable\n");
+    } else if (promedio < 4.5) {
+        printf("Desempeno: Bueno\n");
+    } else {
+        printf("Desempeno: Excelente\n");
+    }
+
+    // Acceso al laboratorio
+    accesoLab = matriculaActiva && documento && (induccion || monitor);
+
+    if (accesoLab) {
+        printf("\nAcceso al laboratorio: PERMITIDO\n");
+
+        if (monitor) {
+            printf("Rol: Monitor (acceso especial)\n");
+        } else {
+            printf("Rol: Estudiante\n");
+        }
+
+    } else {
+        printf("\nAcceso al laboratorio: DENEGADO\n");
+    }
+
+    // Resumen final
+    printf("\n=== RESUMEN FINAL ===\n");
+    printf("Codigo: %d (%s)\n", codigo, paridad);
+    printf("Nombre: %s %c\n", nombre, inicialApellido);
+    printf("Edad: %d\n", edad);
+    printf("Promedio: %.2f\n", promedio);
+    printf("Matricula: %.2lf\n", matricula);
+
+    return 0;
+}
