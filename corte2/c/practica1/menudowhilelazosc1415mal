@@ -12,13 +12,13 @@ int main() {
        scanf("%d , &opcion);
 
  if (opcion == 1) {
- printf("Hola.\n");
+    printf("Hola.\n");
  } else if (opcion == 2) {
- printf("Hasta luego.\n");
+    printf("Hasta luego.\n");
  } else if (opcion == 0) {
- printf("Fin del programa.\n");
+    printf("Fin del programa.\n");
  } else {
- printf("Opcion invalida.\n");
+    printf("Opcion invalida.\n");
  }
 
  } while (opcion != 0); // Repite mientras no se elija salir
