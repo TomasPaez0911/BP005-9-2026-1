@@ -9,7 +9,7 @@ int main() {
        printf("2. despedirse\n");
        printf("0. salir\n");
        printf("seleccione una opcion: ");
-       scanf("%d , &opcion);
+       scanf("%d" , &opcion);
 
  if (opcion == 1) {
     printf("Hola.\n");
