@@ -1,104 +1,105 @@
 #include <stdio.h>
 
- int main () {
- int fila , columna ;
+void figura1() {
+    int fila, columna;
 
- for ( fila = 1; fila <= 5; fila ++) {
- for ( columna = 1; columna <= 5; columna ++) {
- printf ("* ");
- }
- printf ("\n") ;
- }
-
- return 0;
- }
- #include <stdio.h>
-
- int main () {
- int fila , columna ;
-
- for ( fila = 1; fila <= 4; fila ++) {
- for ( columna = 1; columna <= 8; columna ++) {
- printf ("# ");
- }
- printf ("\n") ;
- }
-
- return 0;
+    for (fila = 1; fila <= 5; fila++) {
+        for (columna = 1; columna <= 5; columna++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
 }
- #include <stdio.h>
 
- int main () {
- int fila , columna ;
+void figura2() {
+    int fila, columna;
 
- for ( fila = 1; fila <= 5; fila ++) {
- for ( columna = 1; columna <= fila ; columna ++) {
- printf ("@ ");
- }
- printf ("\n") ;
- }
+    for (fila = 1; fila <= 4; fila++) {
+        for (columna = 1; columna <= 8; columna++) {
+            printf("# ");
+        }
+        printf("\n");
+    }
+}
 
- return 0;
- }
- #include <stdio .h>
+void figura3() {
+    int fila, columna;
 
- int main () {
- int fila , espacios , simbolos ;
+    for (fila = 1; fila <= 5; fila++) {
+        for (columna = 1; columna <= fila; columna++) {
+            printf("@ ");
+        }
+        printf("\n");
+    }
+}
 
- for ( fila = 1; fila <= 5; fila ++) {
- for ( espacios = 1; espacios <= 5 - fila ; espacios ++) {
- printf (" ") ;
- }
+void figura4() {
+    int fila, espacios, simbolos;
 
- for ( simbolos = 1; simbolos <= 2 * fila - 1; simbolos ++) {
- printf ("*") ;
- }
+    for (fila = 1; fila <= 5; fila++) {
+        for (espacios = 1; espacios <= 5 - fila; espacios++) {
+            printf(" ");
+        }
 
- printf ("\n") ;
- }
+        for (simbolos = 1; simbolos <= 2 * fila - 1; simbolos++) {
+            printf("*");
+        }
 
- return 0;
- }
+        printf("\n");
+    }
+}
 
- #include <stdio.h>
+void figura5() {
+    int fila = 5;
+    int columna;
 
- int main () {
- int fila = 5;
- int columna ;
+    while (fila >= 1) {
+        columna = 1;
 
- while ( fila >= 1) {
- columna = 1;
+        while (columna <= fila) {
+            printf("+ ");
+            columna++;
+        }
 
- while ( columna <= fila ) {
- printf ("+ ");
- columna ++;
- }
+        printf("\n");
+        fila--;
+    }
+}
 
- printf ("\n") ;
- fila - -;
- }
+void figura6() {
+    int fila = 1;
+    int columna;
 
- return 0;
- }
+    while (fila <= 4) {
+        columna = 1;
 
-#include <stdio.h>
+        while (columna <= 4) {
+            printf("X ");
+            columna++;
+        }
 
- int main () {
- int fila = 1;
- int columna ;
+        printf("\n");
+        fila++;
+    }
+}
 
- while ( fila <= 4) {
- columna = 1;
+int main() {
+    figura1();
+    printf("\n");
 
- while ( columna <= 4) {
- printf ("X ");
- columna ++;
- }
+    figura2();
+    printf("\n");
 
- printf ("\n") ;
- fila ++;
- }
+    figura3();
+    printf("\n");
 
- return 0;
- }
+    figura4();
+    printf("\n");
 
+    figura5();
+    printf("\n");
+
+    figura6();
+
+    return 0;
+}
