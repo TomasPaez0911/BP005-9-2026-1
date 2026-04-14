@@ -1,0 +1,104 @@
+#include <stdio.h>
+
+ int main () {
+ int fila , columna ;
+
+ for ( fila = 1; fila <= 5; fila ++) {
+ for ( columna = 1; columna <= 5; columna ++) {
+ printf ("* ");
+ }
+ printf ("\n") ;
+ }
+
+ return 0;
+ }
+ #include <stdio.h>
+
+ int main () {
+ int fila , columna ;
+
+ for ( fila = 1; fila <= 4; fila ++) {
+ for ( columna = 1; columna <= 8; columna ++) {
+ printf ("# ");
+ }
+ printf ("\n") ;
+ }
+
+ return 0;
+}
+ #include <stdio.h>
+
+ int main () {
+ int fila , columna ;
+
+ for ( fila = 1; fila <= 5; fila ++) {
+ for ( columna = 1; columna <= fila ; columna ++) {
+ printf ("@ ");
+ }
+ printf ("\n") ;
+ }
+
+ return 0;
+ }
+ #include <stdio .h>
+
+ int main () {
+ int fila , espacios , simbolos ;
+
+ for ( fila = 1; fila <= 5; fila ++) {
+ for ( espacios = 1; espacios <= 5 - fila ; espacios ++) {
+ printf (" ") ;
+ }
+
+ for ( simbolos = 1; simbolos <= 2 * fila - 1; simbolos ++) {
+ printf ("*") ;
+ }
+
+ printf ("\n") ;
+ }
+
+ return 0;
+ }
+
+ #include <stdio.h>
+
+ int main () {
+ int fila = 5;
+ int columna ;
+
+ while ( fila >= 1) {
+ columna = 1;
+
+ while ( columna <= fila ) {
+ printf ("+ ");
+ columna ++;
+ }
+
+ printf ("\n") ;
+ fila - -;
+ }
+
+ return 0;
+ }
+
+#include <stdio.h>
+
+ int main () {
+ int fila = 1;
+ int columna ;
+
+ while ( fila <= 4) {
+ columna = 1;
+
+ while ( columna <= 4) {
+ printf ("X ");
+ columna ++;
+ }
+
+ printf ("\n") ;
+ fila ++;
+ }
+
+ return 0;
+ }
+
