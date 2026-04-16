@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main(){
+int f=5;
+while(f>=1){
+    int c=1;
+    while(c<=f){ cout << "+ "; c++; }
+    cout << endl;
+    f--;
+}
+}
