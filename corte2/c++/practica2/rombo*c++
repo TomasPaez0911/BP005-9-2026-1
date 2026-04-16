@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(){
+int n=5;
+for(int f=1;f<=n;f++){
+ for(int e=1;e<=n-f;e++) cout << " ";
+ for(int s=1;s<=2*f-1;s++) cout << "*";
+ cout << endl;
+}
+for(int f=n-1;f>=1;f--){
+ for(int e=1;e<=n-f;e++) cout << " ";
+ for(int s=1;s<=2*f-1;s++) cout << "*";
+ cout << endl;
+}
+}
