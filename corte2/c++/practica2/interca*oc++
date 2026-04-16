@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main(){
+for(int f=1;f<=5;f++){
+ for(int c=1;c<=8;c++){
+   if((f+c)%2==0) cout << "* ";
+   else cout << "o ";
+ }
+ cout << endl;
+}
+}
