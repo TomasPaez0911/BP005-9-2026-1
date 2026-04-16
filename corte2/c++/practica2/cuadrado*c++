@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(){
+    for(int f=1;f<=5;f++){
+        for(int c=1;c<=5;c++) cout << "* ";
+        cout << endl;
+    }
+}
