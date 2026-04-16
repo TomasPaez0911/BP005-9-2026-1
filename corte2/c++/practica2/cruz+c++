@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(){
+int n=9, centro=5;
+for(int f=1;f<=n;f++){
+ for(int c=1;c<=n;c++){
+   if(f==centro || c==centro) cout << "+";
+   else cout << " ";
+ }
+ cout << endl;
+}
+}
