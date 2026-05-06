@@ -1,0 +1,3 @@
+se realiza segun el archivo taller de la siguiente forma:
+Este programa debe hacerse en C++. En C no se debe intentar usar sobrecarga con el mismo nombre de función.
+Si se desea hacer una versión en C, se deben usar nombres diferentes, por ejemplo: areaCuadrado, areaRectangulo y areaTrapecio.
