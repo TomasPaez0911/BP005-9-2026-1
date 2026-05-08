@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+// Función que utiliza punteros para devolver múltiples valores
+void analizarNumeros(int a, int b, int c, int *suma, int *mayor, int *minor) {
+    *suma = a + b + c;
+
+    // Cálculo del mayor
+    *mayor = a;
+    if (b > *mayor) {
+        *mayor = b;
+    }
+    if (c > *mayor) {
+        *mayor = c;
+    }
+
+    // Cálculo del menor
+    *minor = a;
+    if (b < *minor) {
+        *minor = b;
+    }
+    if (c < *minor) {
+        *minor = c;
+    }
+}
+
+int main() {
+    int x = 8;
+    int y = 3;
+    int z = 15;
+
+    int suma;
+    int mayor;
+    int menor;
+
+    // Se pasan las direcciones de memoria usando &
+    analizarNumeros(x, y, z, &suma, &mayor, &menor);
+
+    printf("Suma  = %d\n", suma);
+    printf("Mayor = %d\n", mayor);
+    printf("Menor = %d\n", menor);
+
+    return 0;
+}
