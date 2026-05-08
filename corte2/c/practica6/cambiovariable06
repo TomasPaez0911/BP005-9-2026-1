@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+// Función que recibe una copia del valor (Paso por valor)
+void cambiarSinPuntero(int n) {
+    n = 100; // Solo cambia la copia local dentro de la función
+}
+
+// Función que recibe la dirección de memoria (Paso por referencia/puntero)
+void cambiarConPuntero(int *p) {
+    if (p != NULL) {
+        *p = 100; // Accede a la dirección y cambia el valor original
+    }
+}
+
+int main() {
+    int x = 5;
+
+    // Caso 1: Sin puntero
+    printf("Antes de cambiarSinPuntero: x = %d\n", x);
+    cambiarSinPuntero(x);
+    printf("Despues de cambiarSinPuntero: x = %d\n", x); 
+    // Imprimirá 5, porque x no cambió.
+
+    printf("\n"); // Espacio para claridad
+
+    // Caso 2: Con puntero
+    printf("Antes de cambiarConPuntero: x = %d\n", x);
+    cambiarConPuntero(&x); // Pasamos la dirección de x con '&'
+    printf("Despues de cambiarConPuntero: x = %d\n", x);
+    // Imprimirá 100, porque modificamos la memoria original.
+
+    return 0;
+}
