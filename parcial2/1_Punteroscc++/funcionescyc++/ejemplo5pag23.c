@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-// Prototipo de la función
 int potencia(int base, int exponente);
 
 int main() {
@@ -13,8 +11,6 @@ int main() {
 
     return 0;
 }
-
-// Definición de la función
 int potencia(int base, int exponente) {
     int resultado = 1;
     int i;
