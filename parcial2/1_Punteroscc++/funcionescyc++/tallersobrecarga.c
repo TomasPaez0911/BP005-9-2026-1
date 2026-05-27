@@ -5,7 +5,7 @@ en caso de usar nombre distintos:
 
 #include <stdio.h>
 
-/* PROTOTIPOS */
+
 float areaCuadrado(float lado);
 float areaRectangulo(float base, float altura);
 float areaTrapecio(float baseMayor, float baseMenor, float altura);
@@ -38,7 +38,6 @@ int main() {
     return 0;
 }
 
-/* FUNCIONES */
 
 float areaCuadrado(float lado) {
     return lado * lado;
