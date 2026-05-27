@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* PROTOTIPOS */
+
 float calcularArea(float base, float altura);
 float calcularPerimetro(float base, float altura);
 void mostrarResultados(float area, float perimetro);
