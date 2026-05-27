@@ -1,19 +1,17 @@
 #include <iostream>
 using namespace std;
-
-/* PROTOTIPOS */
 float area(float lado);
 float area(float base, float altura);
 float area(float baseMayor, float baseMenor, float altura);
 
 int main() {
 
-    /* VARIABLES */
+    
     float lado;
     float base, altura;
     float baseMayor, baseMenor, alturaTrapecio;
 
-    /* ENTRADA */
+
     cout << "Digite el lado del cuadrado: ";
     cin >> lado;
 
@@ -29,7 +27,7 @@ int main() {
     cout << "Digite la altura del trapecio: ";
     cin >> alturaTrapecio;
 
-    /* SALIDA */
+  
     cout << "Area del cuadrado: " << area(lado) << endl;
     cout << "Area del rectangulo: " << area(base, altura) << endl;
     cout << "Area del trapecio: " << area(baseMayor, baseMenor, alturaTrapecio) << endl;
@@ -37,7 +35,7 @@ int main() {
     return 0;
 }
 
-/* FUNCIONES */
+
 
 float area(float lado) {
     return lado * lado;
