@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/* PROTOTIPOS */
+
 int factorialIterativo(int n);
 int factorialRecursivo(int n);
 
@@ -18,7 +18,7 @@ int main() {
     return 0;
 }
 
-/* FUNCIONES */
+
 int factorialIterativo(int n) {
     int r = 1;
     for(int i = 1; i <= n; i++) {
