@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/* PROTOTIPOS */
 void leerMatriz(int m[][3], int filas);
 void mostrarMatriz(int m[][3], int filas);
 int sumarMatriz(int m[][3], int filas);
@@ -21,7 +20,7 @@ int main() {
     return 0;
 }
 
-/* FUNCIONES */
+
 void leerMatriz(int m[][3], int filas) {
     for(int i = 0; i < filas; i++) {
         for(int j = 0; j < 3; j++) {
