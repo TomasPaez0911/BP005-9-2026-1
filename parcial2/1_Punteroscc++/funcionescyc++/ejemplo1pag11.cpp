@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// Prototipo de la función
+
 void saludar();
 
 int main() {
@@ -12,7 +12,7 @@ int main() {
     return 0;
 }
 
-// Definición de la función
+
 void saludar() {
     cout << "Hola. Estamos estudiando funciones." << endl;
 }
