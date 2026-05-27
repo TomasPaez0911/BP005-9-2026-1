@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Prototipo de la función
+
 int sumarMatriz(int m[][3], int filas);
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
     return 0;
 }
 
-// Definición de la función
+
 int sumarMatriz(int m[][3], int filas) {
     int suma = 0;
     int i;
