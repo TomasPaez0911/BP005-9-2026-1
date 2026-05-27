@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/* PROTOTIPOS */
 void leerNotas(float notas[], int n);
 float obtenerMayor(float notas[], int n);
 float obtenerMenor(float notas[], int n);
@@ -29,7 +28,7 @@ int main() {
     return 0;
 }
 
-/* FUNCIONES */
+
 
 void leerNotas(float notas[], int n) {
     for(int i = 0; i < n; i++) {
