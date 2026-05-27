@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Prototipo de la función
+
 int factorial(int n);
 
 int main() {
@@ -13,7 +13,7 @@ int main() {
     return 0;
 }
 
-// Definición de la función (recursiva)
+
 int factorial(int n) {
     if (n == 0) {
         return 1;
