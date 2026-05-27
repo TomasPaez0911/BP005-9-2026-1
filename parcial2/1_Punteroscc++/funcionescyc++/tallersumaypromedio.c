@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* PROTOTIPOS */
+
 void leerArreglo(int v[], int n);
 void mostrarArreglo(int v[], int n);
 int sumarArreglo(int v[], int n);
@@ -24,7 +24,7 @@ int main() {
     return 0;
 }
 
-/* FUNCIONES */
+
 void leerArreglo(int v[], int n) {
     for(int i = 0; i < n; i++) {
         printf("Digite el elemento %d: ", i);
