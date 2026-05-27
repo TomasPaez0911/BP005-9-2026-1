@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-/* PROTOTIPOS */
 void leerArreglo(int v[], int n);
 int obtenerMayor(int v[], int n);
 int obtenerMenor(int v[], int n);
@@ -9,8 +7,7 @@ int main() {
 
     int v[6];
     int mayor, menor;
-
-    leerArreglo(v, 6);
+leerArreglo(v, 6);
 
     mayor = obtenerMayor(v, 6);
     menor = obtenerMenor(v, 6);
@@ -20,8 +17,6 @@ int main() {
 
     return 0;
 }
-
-/* FUNCIONES */
 void leerArreglo(int v[], int n) {
     for(int i = 0; i < n; i++) {
         printf("Digite el elemento %d: ", i);
