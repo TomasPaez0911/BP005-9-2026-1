@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Prototipo de la función
+
 int sumar(int a, int b);
 
 int main() {
@@ -12,7 +12,7 @@ int main() {
     return 0;
 }
 
-// Definición de la función
+
 int sumar(int a, int b) {
     int r = a + b;
     return r;
