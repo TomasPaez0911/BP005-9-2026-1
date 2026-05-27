@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-/* PROTOTIPOS */
 int potencia(int base, int exponente);
 
 int main() {
@@ -21,7 +20,7 @@ int main() {
     return 0;
 }
 
-/* FUNCIONES */
+
 int potencia(int base, int exponente) {
     int resultado = 1;
 
