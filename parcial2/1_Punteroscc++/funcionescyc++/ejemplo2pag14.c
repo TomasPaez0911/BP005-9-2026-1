@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-// Prototipo de la función
 void mostrarArea(float base, float altura);
 
 int main() {
@@ -11,8 +9,6 @@ int main() {
 
     return 0;
 }
-
-// Definición de la función
 void mostrarArea(float base, float altura) {
     float area;
     area = base * altura;
