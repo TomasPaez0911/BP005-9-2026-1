@@ -1,25 +1,25 @@
-#include <stdio.h>  /* Incluye la biblioteca necesaria para printf y scanf. */
-#include <stddef.h> /* Incluye la definición de NULL. */
+#include <stdio.h>  
+#include <stddef.h> 
 
-/* --- 1. Declaración de Funciones (Prototipos) --- */
+
 void duplicar(int *p);
 void intercambiar(int *a, int *b);
 void analizarNumeros(int a, int b, int c, int *suma, int *mayor, int *menor);
 
-/* --- 2. Función Principal --- */
-int main(void) { /* Función principal del programa. */
-    int x = 10;   /* Primera variable de trabajo. */
-    int y = 20;   /* Segunda variable de trabajo. */
-    int z = 5;    /* Tercera variable de trabajo. */
-    
-    int *px = &x; /* px guarda la dirección de x. */
-    
-    int suma;     /* Variable para recibir la suma. */
-    int mayor;    /* Variable para recibir el mayor. */
-    int menor;    /* Variable para recibir el menor. */
-    int opcion;   /* Opción seleccionada por el usuario. */
 
-    do { /* Ciclo principal del menú. */
+int main(void) { 
+    int x = 10;   
+    int y = 20;   
+    int z = 5;   
+    
+    int *px = &x; 
+    
+    int suma;    
+    int mayor;    
+    int menor;   
+    int opcion;   
+
+    do { 
         printf("\n========== MENU CORTO DE PUNTEROS ==========\n");
         printf("1. Mostrar x, &x, px y *px\n");
         printf("2. Duplicar x usando el puntero px\n");
@@ -28,9 +28,9 @@ int main(void) { /* Función principal del programa. */
         printf("0. Salir\n");
         printf("Seleccione una opcion: ");
         
-        scanf("%d", &opcion); /* Lee la opción del usuario. */
+        scanf("%d", &opcion); 
 
-        switch (opcion) { /* Decide qué acción ejecutar según la opción. */
+        switch (opcion) {
             case 1:
                 printf("\n--- Mostrando Informacion de Memoria ---\n");
                 printf("x   = %d\n", x);
@@ -42,21 +42,21 @@ int main(void) { /* Función principal del programa. */
             case 2:
                 printf("\n--- Probando Duplicar ---\n");
                 printf("Antes: x = %d\n", x);
-                duplicar(px); /* Modifica x usando su dirección guardada en px. */
+                duplicar(px); 
                 printf("Despues: x = %d\n", x);
                 break;
                 
             case 3:
                 printf("\n--- Probando Intercambiar ---\n");
                 printf("Antes: x = %d, y = %d\n", x, y);
-                intercambiar(&x, &y); /* Envía las direcciones de x y y. */
+                intercambiar(&x, &y); 
                 printf("Despues: x = %d, y = %d\n", x, y);
                 break;
                 
             case 4:
                 printf("\n--- Probando Analisis Completo ---\n");
                 printf("Variables a analizar: x = %d, y = %d, z = %d\n", x, y, z);
-                analizarNumeros(x, y, z, &suma, &mayor, &menor); /* Envía valores y direcciones de salida. */
+                analizarNumeros(x, y, z, &suma, &mayor, &menor); 
                 printf("Suma  = %d\n", suma);
                 printf("Mayor = %d\n", mayor);
                 printf("Menor = %d\n", menor);
@@ -70,60 +70,50 @@ int main(void) { /* Función principal del programa. */
                 printf("\nOpcion no valida. Intente de nuevo.\n");
                 break;
         }
-    } while (opcion != 0); /* Repite el ciclo mientras no se seleccione salir. */
-
-    return 0; /* Finalización exitosa. */
+    } while (opcion != 0); 
+    return 0;
 }
 
-/* --- 3. Definición de Funciones --- */
 
-/**
- * Recibe la dirección de un entero y duplica su contenido en memoria.
- */
-void duplicar(int *p) { /* Recibe la dirección de un entero. */
-    if (p != NULL) { /* Verifica que el puntero sea válido. */
-        *p = (*p) * 2; /* Duplica el valor almacenado en la dirección apuntada. */
+void duplicar(int *p) { 
+    if (p != NULL) {
+        *p = (*p) * 2; 
     }
 }
 
-/**
- * Intercambia el contenido de dos variables utilizando sus direcciones de memoria.
- */
-void intercambiar(int *a, int *b) { /* Recibe dos direcciones de enteros. */
-    if (a == NULL || b == NULL) { /* Verifica que ambas direcciones sean válidas. */
-        return; /* Sale si alguna dirección no es válida. */
+
+void intercambiar(int *a, int *b) { 
+    if (a == NULL || b == NULL) { 
+        return;
     }
-    int temp = *a; /* Guarda temporalmente el contenido apuntado por a. */
-    *a = *b;       /* Copia en a el contenido apuntado por b. */
-    *b = temp;     /* Copia en b el valor temporal. */
+    int temp = *a;
+    *a = *b;      
+    *b = temp;    
 }
 
-/**
- * Calcula la suma, el mayor y el menor de tres números, y escribe los resultados
- * en las variables originales del main mediante punteros de salida.
- */
+
 void analizarNumeros(int a, int b, int c, int *suma, int *mayor, int *menor) {
-    if (suma == NULL || mayor == NULL || menor == NULL) { /* Verifica direcciones. */
-        return; /* Sale si alguna dirección no es válida. */
+    if (suma == NULL || mayor == NULL || menor == NULL) { 
+        return; 
     }
 
-    *suma = a + b + c; /* Escribe la suma en la dirección recibida. */
+    *suma = a + b + c; 
 
-    /* Algoritmo para encontrar el mayor */
-    *mayor = a; /* Supone inicialmente que a es el mayor. */
+    
+    *mayor = a;
     if (b > *mayor) {
-        *mayor = b; /* Actualiza el mayor. */
+        *mayor = b; 
     }
     if (c > *mayor) {
-        *mayor = c; /* Actualiza el mayor. */
-    }
+        *mayor = c;
 
-    /* Algoritmo para encontrar el menor */
-    *menor = a; /* Supone inicialmente que a es el menor. */
+    
+    *menor = a; 
     if (b < *menor) {
-        *menor = b; /* Actualiza el menor. */
+        *menor = b; 
     }
     if (c < *menor) {
-        *menor = c; /* Actualiza el menor. */
+        *menor = c; 
     }
+}
 }
