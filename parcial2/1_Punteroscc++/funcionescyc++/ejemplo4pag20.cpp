@@ -1,8 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
-// Prototipo de la función
 int esAprobado(float nota);
 
 int main() {
@@ -19,8 +16,6 @@ int main() {
 
     return 0;
 }
-
-// Definición de la función
 int esAprobado(float nota) {
     if (nota >= 3.0) {
         return 1;
