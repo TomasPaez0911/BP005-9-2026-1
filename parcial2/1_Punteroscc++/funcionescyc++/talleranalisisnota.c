@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-/* PROTOTIPOS */
 int esAprobado(float nota);
 void mostrarMensaje(float nota, int resultado);
 
