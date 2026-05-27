@@ -8,7 +8,7 @@ int main() {
     cout << "Ingrese el tamano del rombo: ";
     cin >> n;
 
-    // Parte superior del rombo
+   
     for (int fila = 1; fila <= n; fila++) {
         for (int espacios = 1; espacios <= n - fila; espacios++) {
             cout << " ";
@@ -19,7 +19,7 @@ int main() {
         cout << "\n";
     }
 
-    // Parte inferior del rombo
+   
     for (int fila = n - 1; fila >= 1; fila--) {
         for (int espacios = 1; espacios <= n - fila; espacios++) {
             cout << " ";
