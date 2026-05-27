@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-/* PROTOTIPOS */
+
 int esAprobado(float nota);
 void mostrarMensaje(float nota, int resultado);
 
