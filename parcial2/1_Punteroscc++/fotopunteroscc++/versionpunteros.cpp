@@ -1,6 +1,4 @@
 #include <iostream>
-
-// En C++ usamos referencias (&) en lugar de punteros (*)
 void intercambiar(int &a, int &b) {
     int temp = a;
     a = b;
@@ -12,8 +10,6 @@ int main() {
     int y = 20;
 
     std::cout << "Antes: x = " << x << ", y = " << y << "\n";
-    
-    // Ya no necesitas poner el "&" al llamar a la función
     intercambiar(x, y);
     
     std::cout << "Despues: x = " << x << ", y = " << y << "\n";
