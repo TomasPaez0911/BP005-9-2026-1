@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-// Prototipo de la función
 float calcularPromedio(float n1, float n2, float n3);
 
 int main() {
@@ -14,8 +12,6 @@ int main() {
 
     return 0;
 }
-
-// Definición de la función
 float calcularPromedio(float n1, float n2, float n3) {
     float promedio;
     promedio = (n1 + n2 + n3) / 3.0;
