@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Prototipo de la función
+
 int sumarArreglo(int v[], int n);
 
 int main() {
@@ -13,7 +13,7 @@ int main() {
     return 0;
 }
 
-// Definición de la función
+
 int sumarArreglo(int v[], int n) {
     int suma = 0;
     int i;
