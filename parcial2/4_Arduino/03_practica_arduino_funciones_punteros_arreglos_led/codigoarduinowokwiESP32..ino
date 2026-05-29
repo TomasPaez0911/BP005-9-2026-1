@@ -7,7 +7,7 @@
 // NOTA: En el ESP32, el GPIO 34 es un pin analógico excelente (ADC1).
 // El GPIO 25 soporta salida analógica/PWM.
 const int PIN_POTENCIOMETRO = 34;  
-const int PIN_LED = 25;            
+const int PIN_LED = 2;            
 
 const int CANTIDAD_LECTURAS = 10;  // Tamaño del arreglo para el historial de muestras
 const int TIEMPO_MUESTRA = 50;     // Tiempo de espera en milisegundos entre lecturas individuales
