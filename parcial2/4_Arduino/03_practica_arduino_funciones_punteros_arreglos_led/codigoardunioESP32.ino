@@ -98,7 +98,7 @@ void mostrarReporte(int promedio, int minimo, int maximo, float voltaje, int por
 // --- FLUJO PRINCIPAL ---
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(PIN_LED, OUTPUT);
 }
 
