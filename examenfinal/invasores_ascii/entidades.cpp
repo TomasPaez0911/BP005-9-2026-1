@@ -3,7 +3,7 @@
 #include <iostream>
 
 void inicializarNave(Nave* n) {
-    [span_15](start_span)if (n != nullptr) { 
+    if (n != nullptr) { 
         n->fila = FILAS - 2; 
         n->columna = COLUMNAS / 2; // En el centro
         n->vidas = 3;
@@ -17,7 +17,7 @@ void moverNave(Nave* n, char dir) {
 
 void inicializarBalas(Bala balas[], int tam) {
     for (int i = 0; i < tam; i++) {
-        balas[i].activa = false; [span_21](start_span)
+        balas[i].activa = false; 
     }
 }
 
@@ -39,7 +39,7 @@ void actualizarBalas(Bala balas[], int tam) {
         if (balas[i].activa) {
             balas[i].fila--; // Suben por el mapa
             if (balas[i].fila < 0) {
-                balas[i].activa = false; [span_23](start_span)// Se apaga si sale del mapa[span_23](end_span)
+                balas[i].activa = false; 
             }
         }
     }
@@ -63,7 +63,7 @@ void detectarColisiones(Bala balas[], int tamB, Enemigo enemigos[], int tamE, Ju
         for (int k = 0; k < tamE; k++) {
             if (!enemigos[k].vivo) continue;
             
-            [span_24](start_span)
+            
             if (balas[i].fila == enemigos[k].fila && balas[i].columna == enemigos[k].columna) {
                 balas[i].activa = false;
                 enemigos[k].vivo = false; 
