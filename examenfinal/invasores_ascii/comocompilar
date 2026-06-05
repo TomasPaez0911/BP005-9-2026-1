@@ -1,0 +1,5 @@
+abrir la terminar en ubutu en la carpeta e introducir: # Compilar todos los .cpp al mismo tiempo
+g++ main.cpp entidades.cpp tablero.cpp juego.cpp teclado.cpp memoria.cpp -o invasores
+
+# Ejecutar tu juego
+./invasores
