@@ -21,7 +21,7 @@ int main() {
 
     configurarTeclado(); 
 
-    [span_54](start_span)
+ 
     while (!estado.terminado) {
         // --- A. Leer Teclado ---
         if (tecladoPresionado()) {
@@ -29,7 +29,7 @@ int main() {
             if (tecla == 'q' || tecla == '9') estado.terminado = true;
             if (tecla == 'a' || tecla == 'd') moverNave(&jugador, tecla);
             if (tecla == 'f') dispararBala(listaBalas, 20, &jugador);
-            [span_61](start_span)[span_62](start_span)if (tecla == 'm') { 
+           if (tecla == 'm') { 
                 restaurarTeclado(); // Apaga modo directo para dejar usar el Enter normal
                 mostrarReporteMemoria();
                 configurarTeclado(); // Vuelve a modo juego
@@ -44,8 +44,7 @@ int main() {
         // --- C. Armar el Tablero en memoria ---
         limpiarTablero(mapa);
         
-        // Colocar Nave[span_63](end_span)
-        mapa[jugador.fila][jugador.columna] = 'X'; //[span_64](end_span)
+        mapa[jugador.fila][jugador.columna] = 'X';
         
         // Colocar Balas
         for (int i = 0; i < 20; i++) {
@@ -57,7 +56,7 @@ int main() {
         )
         for (int i = 0; i < 10; i++) {
             if (listaEnemigos[i].vivo) {
-                mapa[listaEnemigos[i].fila][listaEnemigos[i].columna] = '0'; [span_68](start_span)//[span_68](end_span)
+                mapa[listaEnemigos[i].fila][listaEnemigos[i].columna] = '0'; 
             }
         }
 
@@ -70,13 +69,13 @@ int main() {
         usleep(30000); 
     }
 
-    restaurarTeclado(); [span_69](start_span)// Devuelve la consola a su estado normal[span_69](end_span)
+    restaurarTeclado(); 
 
     // Pantalla de finalización
     if (estado.victoria) {
-        std::cout << "\n¡FELICIDADES, DESTRUISETE A TODOS LOS INVASORES!\n"; [span_70](start_span)//[span_70](end_span)
+        std::cout << "\n¡FELICIDADES, DESTRUISETE A TODOS LOS INVASORES!\n"; 
     } else {
-        std::cout << "\nJuego terminado de forma ordenada.\n"; [span_71](start_span)//[span_71](end_span)
+        std::cout << "\nJuego terminado de forma ordenada.\n"; 
     }
 
     return 0;
