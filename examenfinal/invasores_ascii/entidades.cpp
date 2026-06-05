@@ -3,8 +3,8 @@
 #include <iostream>
 
 void inicializarNave(Nave* n) {
-    [span_15](start_span)if (n != nullptr) { // Verificación obligatoria[span_15](end_span)
-        n->fila = FILAS - 2; [span_16](start_span)// Penúltima fila[span_16](end_span)
+    [span_15](start_span)if (n != nullptr) { 
+        n->fila = FILAS - 2; 
         n->columna = COLUMNAS / 2; // En el centro
         n->vidas = 3;
     }
@@ -12,7 +12,7 @@ void inicializarNave(Nave* n) {
 
 void moverNave(Nave* n, char dir) {
     if (n == nullptr) return;
-    if (dir == 'a' && n->columna > 1) n->columna--; [span_17](start_span)[span_18](start_span)// Izquierda con tope[span_17](end_span)[span_18](end_span)
+    if (dir == 'a' && n->columna > 1) n->columna--; 
     if (dir == 'd' && n->columna < COLUMNAS - 2) n->columna++; [span_19](start_span)[span_20](start_span)// Derecha con tope[span_19](end_span)[span_20](end_span)
 }
 
