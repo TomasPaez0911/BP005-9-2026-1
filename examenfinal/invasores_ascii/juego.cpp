@@ -12,7 +12,7 @@ void inicializarJuego(Juego* j) {
 
 void verificarVictoria(Juego* j, int totalEnemigos) {
     if (j != nullptr) {
-        [span_31](start_span)if (j->enemigosDestruidos >= totalEnemigos) { 
+       if (j->enemigosDestruidos >= totalEnemigos) { 
             j->victoria = true;
             j->terminado = true;
         }
