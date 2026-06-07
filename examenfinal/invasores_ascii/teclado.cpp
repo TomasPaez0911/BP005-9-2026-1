@@ -10,12 +10,12 @@ void configurarTeclado() {
     struct termios nuevos;
     tcgetattr(0, &iniciales);
     nuevos = iniciales;
-    nuevos.c_lflag &= ~ICANON; // Desactiva buffer de línea
-    nuevos.c_lflag &= ~ECHO;   // Desactiva el eco de teclas
+    nuevos.c_lflag &= ~ICANON; 
+    nuevos.c_lflag &= ~ECHO;  
     tcsetattr(0, TCSANOW, &nuevos);
     
     int flags = fcntl(0, F_GETFL, 0);
-    fcntl(0, F_SETFL, flags | O_NONBLOCK); // No bloqueante
+    fcntl(0, F_SETFL, flags | O_NONBLOCK); 
 }
 
 void restaurarTeclado() {
