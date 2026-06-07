@@ -1,7 +1,6 @@
 #ifndef TABLERO_H
 #define TABLERO_H
 
-// Constantes para el tamaño del mapa
 const int FILAS = 15;
 const int COLUMNAS = 20;
 
