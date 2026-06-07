@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h> // Habilita la función Sleep en Windows
+#include <windows.h> 
 #include "entidades.h"
 #include "tablero.h"
 #include "juego.h"
