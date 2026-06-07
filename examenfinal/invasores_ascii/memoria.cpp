@@ -16,6 +16,5 @@ void mostrarReporteMemoria() {
     std::cout << "====================================\n";
     std::cout << "Presione ENTER para continuar...";
     
-   
-    std::cin.get(); 
+   std::cin.get(); 
 }
