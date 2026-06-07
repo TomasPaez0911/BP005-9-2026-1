@@ -4,6 +4,7 @@
 #include "tablero.h"
 #include "juego.h"
 #include "teclado.h"
+#include "memoria.h"
 
 
 int main() {
