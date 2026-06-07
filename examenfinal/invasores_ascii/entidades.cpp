@@ -1,15 +1,13 @@
 #include "entidades.h"
 #include "tablero.h"
 #include <iostream>
-
 void inicializarNave(Nave* n) {
     if (n != nullptr) { 
         n->fila = FILAS - 2; 
-        n->columna = COLUMNAS / 2; // En el centro
+        n->columna = COLUMNAS / 2; 
         n->vidas = 3;
     }
 }
-
 void moverNave(Nave* n, char dir) {
     if (n == nullptr) return;
     if (dir == 'a' && n->columna > 1) n->columna--; 
@@ -20,16 +18,15 @@ void inicializarBalas(Bala balas[], int tam) {
         balas[i].activa = false; 
     }
 }
-
 void dispararBala(Bala balas[], int tam, Nave* n) {
     if (n == nullptr) return;
     
     for (int i = 0; i < tam; i++) {
         if (!balas[i].activa) {
-            balas[i].fila = n->fila - 1; // Sale arriba de la nave
+            balas[i].fila = n->fila - 1;
             balas[i].columna = n->columna;
             balas[i].activa = true;
-            break; // Solo dispara una por botón
+            break; 
         }
     }
 }
@@ -56,12 +53,10 @@ void inicializarEnemigos(Enemigo enemigos[], int tam) {
 
 void detectarColisiones(Bala balas[], int tamB, Enemigo enemigos[], int tamE, Juego* j) {
     if (j == nullptr) return;
-    
     for (int i = 0; i < tamB; i++) {
-        if (!balas[i].activa) continue;
-        
-        for (int k = 0; k < tamE; k++) {
-            if (!enemigos[k].vivo) continue;
+    if (!balas[i].activa) continue;
+    for (int k = 0; k < tamE; k++) {
+    if (!enemigos[k].vivo) continue;
             
             
             if (balas[i].fila == enemigos[k].fila && balas[i].columna == enemigos[k].columna) {
