@@ -48,7 +48,7 @@ int main() {
                 std::cout << "Estructura Juego: " << sizeof(Juego) << " bytes." << std::endl;
                 std::cout << "Matriz Tablero: " << sizeof(tablero) << " bytes." << std::endl;
                 std::cout << "-------------------------------------------\n" << std::endl;
-                Sleep(2000); 
+                Sleep(000000.1); 
             }
         }
 
@@ -95,7 +95,7 @@ int main() {
         }
 
         // Freno para estabilizar la pantalla de Windows
-        Sleep(100); 
+        Sleep(000000.1); 
 
     } // <--- FIN DEL WHILE
     // ===================================================
