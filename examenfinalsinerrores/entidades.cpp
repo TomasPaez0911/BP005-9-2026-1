@@ -1,9 +1,8 @@
 #include "entidades.h"
 #include "tablero.h"
-#include "juego.h" // <-- AGREGA ESTA LÍNEA si es ahí donde definiste FILAS y COLUMNAS
+#include "juego.h" 
 #include <iostream>
 
-// El resto de tu código igual...
 void inicializarNave(Nave* n) {
     if (n != nullptr) { 
         n->fila = FILAS - 2; 
@@ -38,7 +37,7 @@ void dispararBala(Bala balas[], int tam, Nave* n) {
 void actualizarBalas(Bala balas[], int tam) {
     for (int i = 0; i < tam; i++) {
         if (balas[i].activa) {
-            balas[i].fila--; // Suben por el mapa
+            balas[i].fila--; 
             if (balas[i].fila < 0) {
                 balas[i].activa = false; 
             }
@@ -49,7 +48,7 @@ void actualizarBalas(Bala balas[], int tam) {
 void inicializarEnemigos(Enemigo enemigos[], int tam) {
     int colMax = COLUMNAS - 2;
     for (int i = 0; i < tam; i++) {
-        enemigos[i].fila = 1 + (i / 5); // Los acomoda en filas de a 5
+        enemigos[i].fila = 1 + (i / 5); 
         enemigos[i].columna = 2 + (i % 5) * 3;
         enemigos[i].vivo = true;
     }
